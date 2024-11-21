@@ -1,0 +1,17 @@
+pre-commit:
+  parallel: true
+  commands:
+    black-check:
+      glob: "*.py"
+      run: black --check {all_files}
+    black-format:
+      glob: "*.py"
+      run: black {all_files}
+    pydocstyle:
+      glob: "*.py"
+      run: pydocstyle {all_files} --ignore=D104,D203,D213,D407,D406
+
+pre-push:
+  commands:
+    run-pytest:
+      run: pytest --cov=app --cov-report=term-missing

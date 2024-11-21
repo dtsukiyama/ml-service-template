@@ -1,0 +1,10 @@
+--extra-index-url https://aws:${CODEARTIFACT_TOKEN}@.....
+internal_package==0.0.1
+--extra-index-url https://pypi.python.org/simple
+fastapi
+ddtrace
+uvicorn
+pytest
+pytest-cov
+tox
+httpx
